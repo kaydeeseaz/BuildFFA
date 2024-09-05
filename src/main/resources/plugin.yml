@@ -1,0 +1,14 @@
+name: BuildFFA
+author: KayDeeSea
+main:  rbw.kaydeesea.bffa.Main
+version: FINAL-11.0
+softdepend:
+  - BedWars1058
+  - PlaceholderAPI
+loadbefore:
+  - Citizens
+commands:
+  buildffa:
+    description: Buildffa Command
+    aliases:
+      - bffa

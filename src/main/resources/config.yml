@@ -1,0 +1,206 @@
+npcs:
+  - §9Hotbar Manager::bffa hotbarmanager
+  - §3Kits!::bffa kits
+  - §4Leave::bw leave
+
+# the seconds of combat log.
+combatlog: 10
+void-height: 40
+# the seconds till a block placed disappears
+block-disappearing: 8
+
+# the seconds till a broken block re-appears
+block-appearing: 5
+
+# the count of custom messages. Increase it if you are adding more custom kills messages
+deathmessages: 3
+messages:
+  death-by-player-1: "§e%victim% §egot beamed by §6%attacker%"
+  death-by-player-2: "§e%victim% §egot daddy'ed by §6%attacker%"
+  death-by-player-3: "§e%victim% §egot railed by §6%attacker%"
+  death-by-void: "§e%victim% §6fell in the void."
+  death-unknown: "§e%victim% §6died."
+  chat-formatting: "§7[§6%killsstreak%§7] §e%player%§7 §7[§eBuild§cFFA§7]: §e%message%"
+  leave-message: "§7%player% §eleft FFA"
+  join-message: "§7%player% §ejoined FFA"
+
+scoreboard:
+  scoreboard-name: "§6§lBuild FFA"
+  top-kills: "§6Top Killstreak: §f%player%"
+  kills: "§6Kills: §a%kills%"
+  deaths: "§6Deaths: §c%deaths%"
+  killstreak: "§6KillStreak: §f%killstreak%"
+  deathstreak: "§6DeathStreak: §f%deathstreak%"
+  ip: "§eplay.test.fun"
+
+killsrewards:
+  # Example
+  # choose the kill by changing the number after kills MAX IS 50, after 50 there's 50+ that gets flagged everytime you kill someone at 50 killstreak
+  # Kills10:
+  #        ==: org.bukkit.inventory.ItemStack
+  #        type: WOOD_SWORD
+  '1':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+  '2':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+  '3':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      amount: 2
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+      amount: 1
+  '4':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      amount: 2
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+      amount: 1
+    item3:
+      potion: jump
+  '5':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      amount: 2
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+      amount: 1
+    item3:
+      ==: org.bukkit.inventory.ItemStack
+      type: FIREBALL
+      amount: 1
+    item4:
+      potion: jump
+  '6':
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      amount: 2
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+      amount: 1
+    item3:
+      ==: org.bukkit.inventory.ItemStack
+      type: FIREBALL
+      amount: 2
+    item4:
+      potion: jump
+    item5:
+      potion: invisibility
+  others:
+    item1:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      amount: 3
+    item2:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENDER_PEARL
+      amount: 1
+    item3:
+      ==: org.bukkit.inventory.ItemStack
+      type: FIREBALL
+      amount: 1
+    item4:
+      potion: jump
+    item5:
+      potion: invisibility
+
+spawnloc:
+  ==: org.bukkit.Location
+  world: buildffa
+  x: -2.6
+  y: 143.0
+  z: 4.4
+  pitch: 0.2
+  yaw: -89
+
+maxbuildy: 115
+kitslist:
+  # list of the kits, make sure to add them here.
+  - default
+kitperms:
+  # add kits perms here use NONE if you want it for everyone
+  default: NONE
+kits:
+  # add new kits voices here, make sure you added the same kit in kitperms and kitslist
+  default:
+    armor:
+      # armors. to add enchants you can copy this:
+      #
+      # meta:
+      #  ==: ItemMeta
+      #  meta-type: UNSPECIFIC
+      #  enchants:
+      #    DAMAGE_ALL: 1
+      cap:
+        ==: org.bukkit.inventory.ItemStack
+        type: LEATHER_HELMET
+        meta:
+          ==: ItemMeta
+          meta-type: LEATHER_ARMOR
+          color:
+            ==: Color
+            RED: 255
+            BLUE: 85
+            GREEN: 85
+      chestplate:
+        ==: org.bukkit.inventory.ItemStack
+        type: LEATHER_CHESTPLATE
+        meta:
+          ==: ItemMeta
+          meta-type: LEATHER_ARMOR
+          color:
+            ==: Color
+            RED: 255
+            BLUE: 85
+            GREEN: 85
+      leggins:
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_LEGGINGS
+      boots:
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_BOOTS
+    items:
+      # add slots
+      slot0:
+        ==: org.bukkit.inventory.ItemStack
+        type: WOOD_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ALL: 1
+      slot1:
+        ==: org.bukkit.inventory.ItemStack
+        type: WOOL
+        amount: 64
+      slot2:
+        ==: org.bukkit.inventory.ItemStack
+        type: SHEARS
+      slot3:
+        ==: org.bukkit.inventory.ItemStack
+        type: IRON_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 1
+      slot4:
+        ==: org.bukkit.inventory.ItemStack
+        type: WOOL
+        amount: 64
