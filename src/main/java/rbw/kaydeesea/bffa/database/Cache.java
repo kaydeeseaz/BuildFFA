@@ -93,7 +93,7 @@ public class Cache {
    public static int getStats(String p, Cache.Stats stats) {
       if (!db.isInt(p + kills)) {
          return 0;
-      } else if (stats.equals(Cache.Stats.KILLS)) {
+      }else if (stats.equals(Cache.Stats.KILLS)) {
          return db.getInt(p + kills);
       } else if (stats.equals(Cache.Stats.DEATHS)) {
          return db.getInt(p + deaths);
@@ -129,6 +129,6 @@ public class Cache {
       HIGHESTKS,
       KS,
       HIGHESTDS,
-      DS;
+      DS
    }
 }

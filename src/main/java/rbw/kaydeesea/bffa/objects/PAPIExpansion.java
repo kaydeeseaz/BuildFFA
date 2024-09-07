@@ -19,6 +19,9 @@ public class PAPIExpansion extends PlaceholderExpansion {
    }
 
    public String onPlaceholderRequest(Player player, @NotNull String params) {
+      if(params.equalsIgnoreCase("kdr")) {
+         return String.format("%.3f", (double) Cache.getStats(player.getName(), Cache.Stats.KILLS) / (double) Cache.getStats(player.getName(), Cache.Stats.DEATHS));
+      }
       try {
          Cache.Stats.valueOf(params);
       } catch (IllegalArgumentException var4) {

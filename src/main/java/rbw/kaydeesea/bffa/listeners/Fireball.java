@@ -136,15 +136,15 @@ public class Fireball implements Listener {
             return;
          }
 
-         long now = System.currentTimeMillis();
-         long lasthit = shootFbs.getOrDefault(e.getPlayer(), -1L);
-         if (lasthit != -1L && now - lasthit < 1500L) {
-            e.getPlayer().sendMessage("§4You are on fireball cooldown.");
-            e.setCancelled(true);
-            return;
-         }
 
          if (inHand.getType() == BedWars.nms.materialFireball()) {
+            long now = System.currentTimeMillis();
+            long lasthit = shootFbs.getOrDefault(e.getPlayer(), -1L);
+            if (lasthit != -1L && now - lasthit < 1500L) {
+               e.getPlayer().sendMessage("§4You are on fireball cooldown.");
+               e.setCancelled(true);
+               return;
+            }
             e.setCancelled(true);
             shootFbs.put(e.getPlayer(), System.currentTimeMillis());
             Utils.shootFB(e.getPlayer(), inHand, (float)this.fireballExplosionSize, 10.0D);
