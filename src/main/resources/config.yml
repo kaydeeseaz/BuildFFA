@@ -5,33 +5,33 @@ npcs:
 
 # the seconds of combat log.
 combatlog: 10
-void-height: 40
+void-height: 20
 # the seconds till a block placed disappears
 block-disappearing: 8
 
 # the seconds till a broken block re-appears
-block-appearing: 5
+block-appearing: 9
 
 # the count of custom messages. Increase it if you are adding more custom kills messages
 deathmessages: 3
 messages:
-  death-by-player-1: "§e%victim% §egot beamed by §6%attacker%"
-  death-by-player-2: "§e%victim% §egot daddy'ed by §6%attacker%"
-  death-by-player-3: "§e%victim% §egot railed by §6%attacker%"
-  death-by-void: "§e%victim% §6fell in the void."
-  death-unknown: "§e%victim% §6died."
-  chat-formatting: "§7[§6%killsstreak%§7] §e%player%§7 §7[§eBuild§cFFA§7]: §e%message%"
-  leave-message: "§7%player% §eleft FFA"
-  join-message: "§7%player% §ejoined FFA"
+  death-by-player-1: "§3%victim% §7got killed by §b%attacker%"
+  death-by-player-2: "§3%victim% §7got smoked by §b%attacker%"
+  death-by-player-3: "§3%victim% §7got railed by §b%attacker%"
+  death-by-void: "§3%victim% §7fell in the void."
+  death-unknown: "§c%victim% §7died (we don't know how)."
+  chat-formatting: "%luckperms_prefix%%player% %luckperms_suffix%§7 §9[§b§lBuild§3§lFFA§9]: §f%message%"
+  leave-message: "§7%player% §eleft BuildFFA"
+  join-message: "§7%player% §ejoined BuildFFA"
 
 scoreboard:
-  scoreboard-name: "§6§lBuild FFA"
-  top-kills: "§6Top Killstreak: §f%player%"
-  kills: "§6Kills: §a%kills%"
-  deaths: "§6Deaths: §c%deaths%"
-  killstreak: "§6KillStreak: §f%killstreak%"
-  deathstreak: "§6DeathStreak: §f%deathstreak%"
-  ip: "§eplay.test.fun"
+  scoreboard-name: "§b§lBuild§3§lFFA"
+  top-kills: "§7Top Killstreak: §b%player%"
+  kills: "§7Kills: §b%kills%"
+  deaths: "§7Deaths: §3%deaths%"
+  killstreak: "§7KillStreak: §b%killstreak%"
+  deathstreak: "§7DeathStreak: §3%deathstreak%"
+  ip: "§TOSET.it"
 
 killsrewards:
   # Example
@@ -123,13 +123,13 @@ killsrewards:
 spawnloc:
   ==: org.bukkit.Location
   world: buildffa
-  x: -2.6
+  x: 6
   y: 143.0
-  z: 4.4
-  pitch: 0.2
-  yaw: -89
+  z: 0
+  pitch: 0.6
+  yaw: 90.5
 
-maxbuildy: 115
+maxbuildy: 89
 kitslist:
   # list of the kits, make sure to add them here.
   - default
@@ -171,15 +171,15 @@ kits:
             GREEN: 85
       leggins:
         ==: org.bukkit.inventory.ItemStack
-        type: IRON_LEGGINGS
+        type: DIAMOND_LEGGINGS
       boots:
         ==: org.bukkit.inventory.ItemStack
-        type: IRON_BOOTS
+        type: DIAMOND_BOOTS
     items:
       # add slots
       slot0:
         ==: org.bukkit.inventory.ItemStack
-        type: WOOD_SWORD
+        type: STONE_SWORD
         meta:
           ==: ItemMeta
           meta-type: UNSPECIFIC
@@ -200,7 +200,3 @@ kits:
           meta-type: UNSPECIFIC
           enchants:
             DIG_SPEED: 1
-      slot4:
-        ==: org.bukkit.inventory.ItemStack
-        type: WOOL
-        amount: 64
